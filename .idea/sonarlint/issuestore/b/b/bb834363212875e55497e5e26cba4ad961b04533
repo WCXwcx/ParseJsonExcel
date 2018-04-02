@@ -1,0 +1,13 @@
+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(µˆœÑ8å¯‚œ¦,
+]squid:S1075"ARefactor your code to get this URI from a customizable parameter.(Úò’á8Áž‚š¦,
+]squid:S1075"ARefactor your code to get this URI from a customizable parameter.(Ä€Àñ8©’Ù’¦,
+Usquid:UselessImportCheck",Remove this unused import 'jxl.write.Blank'.(ÅÆÅ¶8êâ¸›¦,
+Osquid:UselessImportCheck"&Remove this unused import 'jxl.Sheet'.(¡ãÙî8†õ÷™¦,
+Isquid:S2440"(Remove this instantiation of "PracJson".(Ì¨”¥ûÿÿÿÿ8©’Ù’¦,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8©’Ù’¦,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(„½êù8©’Ù’¦,
+Nsquid:S1481"-Remove this unused "pracJson" local variable.(Ì¨”¥ûÿÿÿÿ8©’Ù’¦,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8©’Ù’¦,
+Ksquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8©’Ù’¦,

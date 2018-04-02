@@ -1,0 +1,9 @@
+
+Hsquid:S1612",Replace this lambda with a method reference.(åš¿Š8½›çŸ,
+rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ïÊÄÿûÿÿÿÿ
+Ssquid:S1854"7Remove this useless assignment to local variable "map".(åš¿Š8›ùŸ,
+Dsquid:S1481"(Remove this unused "map" local variable.(åš¿Š8›ùŸ,
+Ysquid:S1854"8Remove this useless assignment to local variable "list".(ØŒ³—üÿÿÿÿ8·ŠĞŸ,
+[squid:S1854":Remove this useless assignment to local variable "filter".(Ø¡Ñêşÿÿÿÿ8¡„’ ,
+Lsquid:S1481"+Remove this unused "filter" local variable.(Ø¡Ñêşÿÿÿÿ8¡„’ ,
+Jsquid:S1481")Remove this unused "list" local variable.(ØŒ³—üÿÿÿÿ8·ŠĞŸ,
