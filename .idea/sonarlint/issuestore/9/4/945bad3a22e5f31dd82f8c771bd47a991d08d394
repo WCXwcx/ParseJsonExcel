@@ -1,12 +1,0 @@
-
-Psquid:S1854"5Remove this useless assignment to local variable "f".(‘¿š8‹Î¶Ê²,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8—¦Ê²,
-Bsquid:S2129"!Remove this "Integer" constructor(²“Ş˜øÿÿÿÿ8—¦Ê²,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(†Á¸ÿÿÿÿÿ8—¦Ê²,
-Asquid:S1481"&Remove this unused "f" local variable.(‘¿š8‹Î¶Ê²,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(õÁÒ—8—¦Ê²,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¥›ş“8—¦Ê²,
