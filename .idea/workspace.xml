@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59876b0e-0692-46f5-af23-be730fc9c6d7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/Prac1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/Prac2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e97d2917a16322cd09d3e6eb303f6aec7f4e450" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/392472ba6740c6200f9b74c5d29f47f1d8ea8ca0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/708008da7797ecc9f65b5c4d07446647e1c6b7a1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/708008da7797ecc9f65b5c4d07446647e1c6b7a1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90201d14d8da9870b394da246ff091ca2c7b98e8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/aec978ae6e2023bea230743894362f3a100cd3de" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bb834363212875e55497e5e26cba4ad961b04533" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bb834363212875e55497e5e26cba4ad961b04533" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/daaba911f916582b709697509d480346fb8de7e8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb1bf19fc7e0ac0fa93e54925d487f4f2132a20c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb1bf19fc7e0ac0fa93e54925d487f4f2132a20c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/Spider/PracExcel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practice/Spider/PracExcel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/Spider/PracJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practice/Spider/PracJson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/Spider/PracShell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practice/Spider/PracShell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/lambda/Chapter2/Practice1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/lambda/Charper3/Practice1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/lambda/Charter4/Practice1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/lambda/Charter4/Practice2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/practice/P1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Spider/PracExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spider/PracExcel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Spider/PracJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spider/PracJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Spider/PracShell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spider/PracShell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PracJson.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PracJson.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spider/PracJson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="375">
+              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -104,6 +90,7 @@
         <option value="$PROJECT_DIR$/src/main/java/test/Prac2.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spider/PracExcel.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spider/PracJson.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -347,12 +334,12 @@
       <workItem from="1528098566862" duration="632000" />
       <workItem from="1528463332836" duration="597000" />
       <workItem from="1528464274517" duration="363000" />
-      <workItem from="1528472001475" duration="708000" />
+      <workItem from="1528472001475" duration="1411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120486000" />
+    <option name="totallyTimeSpent" value="121189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,7 +418,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/lambda/Charter4/Practice1.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/lambda/Charter4/Practice2.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/practice/P1.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/lambda/Chapter2/Practice1.java" />
@@ -660,8 +646,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spider/PracJson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="375">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
