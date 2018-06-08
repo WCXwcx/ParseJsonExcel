@@ -1,16 +1,0 @@
-
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(åÀ¼¶şÿÿÿÿ8õ×…ÑŸ,
-Ysquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ã¿®ÑŸ,
-Jsquid:S1481")Remove this unused "flag" local variable.(ŸÿáÑÿÿÿÿÿ8õ×…ÑŸ,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(åÀ¼¶şÿÿÿÿ8œŠØ,
-Ysquid:S1854"8Remove this useless assignment to local variable "flag".(³ÖÉÿÿÿÿÿ8õ×…ÑŸ,
-asquid:S3518"EMake sure this expression can't be zero before doing this modulation.(Ğ‰‚…8’Ù†ÑŸ,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(´äÙîÿÿÿÿÿ8ü²ŸØ,
-`squid:UselessImportCheck"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8ã¿®ÑŸ,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(Í‹øÌ8Ô’‰Ø,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(ä„ùàúÿÿÿÿ8ÉÃÿ¦,

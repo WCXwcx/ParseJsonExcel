@@ -13,6 +13,7 @@ import java.util.*;
 
 /**
  * Created by wuchaoxiang on 2018/3/18.
+ * 从shell生成的各个json文件取数据并且组装，主要的json数据操作类
  */
 public class PracJson {
 
@@ -28,8 +29,14 @@ public class PracJson {
 
     private static final String THREE_T = "3000_";
 
+    private static final String END = "_1";
+
     private static final List<String> ONE_H_APP = Arrays.asList(
             "openqrcode",
+            "openqrcode0",
+            "openqrcode1",
+            "openqrcode2",
+            "openqrcode3",
             "bscancqrcode",
             "zcmqrcodebiz",
             "paycloud",
@@ -57,42 +64,75 @@ public class PracJson {
 
     private static final String SQLLIST = "sqlList";
 
-    public static Map<String, List<Integer>> readJsonByDay(int day) {
+    public static Map<String, List<Integer>> readJsonByDay(int day, boolean flag) {
         Map<String, List<Integer>> map = new HashMap<>();
         File file = null;
         //解析100ms文件
         try {
             file = new File(FILE_PATH + ONE_H + day + FILE_SUFFIX);
-            parseJson(file, map);
+            parseJson(file, map, flag);
         } catch (Exception e) {
             e.printStackTrace();
         }
         //解析500ms文件
         try {
             file = new File(FILE_PATH + FIVE_H + day + FILE_SUFFIX);
-            parseJson(file, map);
+            parseJson(file, map, flag);
         } catch (Exception e) {
             e.printStackTrace();
         }
         //解析1000ms文件
         try {
             file = new File(FILE_PATH + ONE_T + day + FILE_SUFFIX);
-            parseJson(file, map);
+            parseJson(file, map, flag);
         } catch (Exception e) {
             e.printStackTrace();
         }
         //解析3000ms文件
         try {
             file = new File(FILE_PATH + THREE_T + day + FILE_SUFFIX);
-            parseJson(file, map);
+            parseJson(file, map, flag);
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        System.out.println(map.toString());
         return map;
     }
 
-    public static void parseJson(File file, Map<String, List<Integer>> map) throws Exception {
+    public static Map<String, List<Integer>> readJsonByDay2(int day, boolean flag) {
+        Map<String, List<Integer>> map = new HashMap<>();
+        File file = null;
+        //解析100ms文件
+        try {
+            file = new File(FILE_PATH + ONE_H + day + END +FILE_SUFFIX);
+            parseJson(file, map, flag);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //解析500ms文件
+        try {
+            file = new File(FILE_PATH + FIVE_H + day + END + FILE_SUFFIX);
+            parseJson(file, map, flag);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //解析1000ms文件
+        try {
+            file = new File(FILE_PATH + ONE_T + day + END + FILE_SUFFIX);
+            parseJson(file, map, flag);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //解析3000ms文件
+        try {
+            file = new File(FILE_PATH + THREE_T + day + END + FILE_SUFFIX);
+            parseJson(file, map, flag);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return map;
+    }
+
+    public static void parseJson(File file, Map<String, List<Integer>> map, boolean flag) throws Exception {
         if (!file.exists()) {
             return;
         }
@@ -104,12 +144,23 @@ public class PracJson {
         JsonObject data = (JsonObject) object.get("data");
         JsonObject cat = new JsonObject();
         if ((!file.getName().contains("1000")) && file.getName().contains("100")) {
-            JsonObject smartPay = (JsonObject) data.get("智能支付");
-            cat = (JsonObject) smartPay.get("招财猫");
+            if (flag) {
+                JsonObject smartPay = (JsonObject) data.get("智能支付");
+                cat = (JsonObject) smartPay.get("智能支付");
+            } else {
+                JsonObject smartPay = (JsonObject) data.get("金融服务平台");
+                cat = (JsonObject) smartPay.get("收单平台");
+            }
         } else {
-            JsonObject eachBgSlowQueryInfo = (JsonObject) data.get("eachBgSlowQueryInfo");
-            JsonObject smartPay = (JsonObject) eachBgSlowQueryInfo.get("智能支付");
-            cat = (JsonObject) smartPay.get("招财猫");
+            if (flag) {
+                JsonObject eachBgSlowQueryInfo = (JsonObject) data.get("eachBgSlowQueryInfo");
+                JsonObject smartPay = (JsonObject) eachBgSlowQueryInfo.get("智能支付");
+                cat = (JsonObject) smartPay.get("智能支付");
+            } else {
+                JsonObject eachBgSlowQueryInfo = (JsonObject) data.get("eachBgSlowQueryInfo");
+                JsonObject smartPay = (JsonObject) eachBgSlowQueryInfo.get("金融服务平台");
+                cat = (JsonObject) smartPay.get("收单平台");
+            }
         }
         for (Map.Entry<String, JsonElement> jsonElementEntry : cat.entrySet()) {
             String key = jsonElementEntry.getKey();
@@ -245,19 +296,20 @@ public class PracJson {
         return Integer.valueOf(target.format(formatter));
     }
 
-    public static Map<Integer, Map<String, List<Integer>>> readJsons(int day) {
+    public static Map<Integer, Map<String, List<Integer>>> readJsons(int day, boolean flag) {
         Map<Integer, Map<String, List<Integer>>> mapMap = new HashMap<>();
         for (int i = 1; i <= 7; i++) {
-            Map<String, List<Integer>> map = readJsonByDay(day);
+            Map<String, List<Integer>> map = new HashMap<>();
+            if (flag) {
+                map = readJsonByDay(day, flag);
+            } else {
+                map = readJsonByDay2(day, flag);
+            }
             mapMap.put(day, map);
+//            System.out.println(day);
             day = addDate(day, 1);
         }
-//        System.out.println(mapMap);
         return mapMap;
-    }
-
-    public static void main(String[] args) {
-        readJsons(20180319);
     }
 
 }

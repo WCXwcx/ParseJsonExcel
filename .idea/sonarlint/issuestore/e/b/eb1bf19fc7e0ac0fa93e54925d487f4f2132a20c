@@ -1,17 +1,25 @@
 
-]squid:UselessImportCheck"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8©’Ù’¦,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ßÉš“¦,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ßÉš“¦,
-bsquid:UselessImportCheck"9Remove this unused import 'netscape.javascript.JSObject'.(Å²ÒÌ8©’Ù’¦,
-Xsquid:S1854"7Remove this useless assignment to local variable "cat".(¶ÖÎ ùÿÿÿÿ8ßÉš“¦,
-tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(„½êù8©’Ù’¦,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ßÉš“¦,
-bsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(äúÌûÿÿÿÿ8©’Ù’¦,
-hsquid:UselessImportCheck":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8©’Ù’¦,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ËäÚìúÿÿÿÿ8ñœ¦,
-y
-squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(‡¬‚ıÿÿÿÿ8ßÉš“¦,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(°À…ùÿÿÿÿ8”í›¦,
-nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 70 to the 15 allowed.(‘¢–Ì8ßÉš“¦,
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‘¢–Ì8ßÉš“¦,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ßÉš“¦,
+jsquid:UselessImportCheck":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8Ÿ‹ÛÎº,
+Fsquid:S1148X"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿ‹ÛÎº,
+Fsquid:S1148l"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿ‹ÛÎº,
+|
+squid:S135¤"YReduce the total number of break and continue statements in this loop to use at most one.(‡¬‚ıÿÿÿÿ8Ÿ‹ÛÎº,
+Fsquid:S1148J"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿ‹ÛÎº,
+vsquid:S3776†"RRefactor this method to reduce its Cognitive Complexity from 76 to the 15 allowed.(Ä˜­Ñşÿÿÿÿ8Ÿ‹ÛÎº,
+Gsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿ‹ÛÎº,
+:squid:S3626Ø"Remove this redundant jump.(ÉŠ©ƒ8Ÿ‹ÛÎº,
+dsquid:UselessImportCheck"9Remove this unused import 'netscape.javascript.JSObject'.(Å²ÒÌ8Ÿ‹ÛÎº,
+Fsquid:S1148z"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿ‹ÛÎº,
+[squid:S1854­"7Remove this useless assignment to local variable "map".(ùÏ±‹úÿÿÿÿ8Ÿ‹ÛÎº,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(äÏ½úÿÿÿÿ8Ÿ‹ÛÎº,
+Fsquid:S1148s"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿ‹ÛÎº,
+[squid:S1854"7Remove this useless assignment to local variable "cat".(¶ÖÎ ùÿÿÿÿ8Ÿ‹ÛÎº,
+Fsquid:S1148_"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿ‹ÛÎº,
+:squid:S3626º"Remove this redundant jump.(ÉŠ©ƒ8Ÿ‹ÛÎº,
+:squid:S3626ö"Remove this redundant jump.(ÉŠ©ƒ8Ÿ‹ÛÎº,
+ksquid:S00112†"FDefine and throw a dedicated exception instead of using a generic one.(Ä˜­Ñşÿÿÿÿ8Ÿ‹ÛÎº,
+osquid:CommentedOutCodeLine´"<This block of commented-out lines of code should be removed.(ÎÄŠõøÿÿÿÿ8Ÿ‹ÛÎº,
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„½êù8¦îï¬¯,
+_squid:UselessImportCheck	"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8Ÿ‹ÛÎº,
+Wsquid:S1118":Add a private constructor to hide the implicit public one.(é¨Ğ8Ÿ‹ÛÎº,
+Fsquid:S1148Q"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿ‹ÛÎº,

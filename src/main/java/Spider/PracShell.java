@@ -12,7 +12,7 @@ public class PracShell {
     public static void main(String[] args) {
         Process process = null;
         List<String> processList = new ArrayList<>();
-        String shell = "";
+        String shell = "ps -ef";
         try {
             process = Runtime.getRuntime().exec(shell);
             BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
