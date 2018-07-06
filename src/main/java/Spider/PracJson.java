@@ -17,6 +17,7 @@ import java.util.*;
  */
 public class PracJson {
 
+    //这个路径自己配置
     private static final String FILE_PATH = "/Users/wuchaoxiang/db/db_";
 
     private static final String FILE_SUFFIX = ".json";
@@ -98,6 +99,12 @@ public class PracJson {
         return map;
     }
 
+    /**
+     * 按天维度解析，4种慢查询，得到一个map
+     * @param day
+     * @param flag
+     * @return
+     */
     public static Map<String, List<Integer>> readJsonByDay2(int day, boolean flag) {
         Map<String, List<Integer>> map = new HashMap<>();
         File file = null;
@@ -120,18 +127,27 @@ public class PracJson {
             file = new File(FILE_PATH + ONE_T + day + END + FILE_SUFFIX);
             parseJson(file, map, flag);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            System.out.println("---------解析json对象失败---------");
         }
         //解析3000ms文件
         try {
             file = new File(FILE_PATH + THREE_T + day + END + FILE_SUFFIX);
             parseJson(file, map, flag);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            System.out.println("---------解析json对象失败---------");
         }
         return map;
     }
 
+    /**
+     * 解析单个文件
+     * @param file
+     * @param map
+     * @param flag
+     * @throws Exception
+     */
     public static void parseJson(File file, Map<String, List<Integer>> map, boolean flag) throws Exception {
         if (!file.exists()) {
             return;
@@ -152,12 +168,11 @@ public class PracJson {
                 cat = (JsonObject) smartPay.get("收单平台");
             }
         } else {
+            JsonObject eachBgSlowQueryInfo = eachBgSlowQueryInfo = (JsonObject) data.get("eachBgSlowQueryInfo");
             if (flag) {
-                JsonObject eachBgSlowQueryInfo = (JsonObject) data.get("eachBgSlowQueryInfo");
                 JsonObject smartPay = (JsonObject) eachBgSlowQueryInfo.get("智能支付");
                 cat = (JsonObject) smartPay.get("智能支付");
             } else {
-                JsonObject eachBgSlowQueryInfo = (JsonObject) data.get("eachBgSlowQueryInfo");
                 JsonObject smartPay = (JsonObject) eachBgSlowQueryInfo.get("金融服务平台");
                 cat = (JsonObject) smartPay.get("收单平台");
             }
@@ -296,7 +311,7 @@ public class PracJson {
         return Integer.valueOf(target.format(formatter));
     }
 
-    public static Map<Integer, Map<String, List<Integer>>> readJsons(int day, boolean flag) {
+    public static Map<Integer, Map<String, List<Integer>>> readJsons(Integer day, boolean flag) {
         Map<Integer, Map<String, List<Integer>>> mapMap = new HashMap<>();
         for (int i = 1; i <= 7; i++) {
             Map<String, List<Integer>> map = new HashMap<>();

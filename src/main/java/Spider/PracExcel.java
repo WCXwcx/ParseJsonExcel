@@ -8,8 +8,12 @@ import jxl.write.WritableWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -21,20 +25,24 @@ import java.util.Map;
  */
 public class PracExcel {
 
-    //每周开始的第一天，每周一
-    private static final int START_DAY = 20180528;
-
     public static void main(String[] args) {
+        //每周开始的第一天，每周一
+        Integer lasWeekMonday = getLastWeekMondayInt();
+
+        System.out.println("-------------------上周一是：" + lasWeekMonday + "-------------------");
+
         /**
          * 本地必须现有work.xls文件，配置好需要的内容格式
+         * 之所以有三个文件，是因为有两次操作Excel的操作，第二次会把第一次的结果覆盖。
+         * 最终的结果在work_3.xls中
          */
         File file = new File("/Users/wuchaoxiang/work.xls");
-        readExcel(file, START_DAY,  true);
+        readExcel(file, lasWeekMonday, true);
         File file1 = new File("/Users/wuchaoxiang/work_2.xls");
-        readExcel(file1, START_DAY,  false);
+        readExcel(file1, lasWeekMonday, false);
     }
 
-    public static void readExcel(File file, int day, boolean flag) {
+    public static void readExcel(File file, Integer day, boolean flag) {
         PracJson pracJson = new PracJson();
         WritableWorkbook book = null;
         FileInputStream fileInputStream = null;
@@ -59,19 +67,17 @@ public class PracExcel {
 
             for (int i = 0; i <= 6; i++) {
                 Map<String, List<Integer>> map = mapMap.get(addDate(day, i));
-                System.out.println(map);
                 for (int j = 1; j <= 22; j++) { //原来是18个库，新添加了4个分库
                     String content = cells[j].getContents();
                     if (map.containsKey(content)) {
-                        wsheet.addCell(new Label(i+3, j, map.get(content).get(0)+","+map.get(content).get(1)+","+map.get(content).get(2)));
+                        wsheet.addCell(new Label(i + 3, j, map.get(content).get(0) + "," + map.get(content).get(1) + "," + map.get(content).get(2)));
                     } else {
                         if (flag) {
-                            wsheet.addCell(new Label(i+3, j, "0,0,0"));
+                            wsheet.addCell(new Label(i + 3, j, "0,0,0"));
                         }
                     }
                 }
             }
-//            System.out.println(mapMap);
             book.write();
 
         } catch (Exception e) {
@@ -98,5 +104,39 @@ public class PracExcel {
         return Integer.valueOf(target.format(formatter));
     }
 
+    public static Integer getLastWeekMondayInt() {
+        Date date = getLastWeekMonday();
+        Instant instant = date.toInstant();
+        ZoneId zoneId = ZoneId.systemDefault();
+        // atZone()方法返回在指定时区从此Instant生成的ZonedDateTime。
+        LocalDate localDate = instant.atZone(zoneId).toLocalDate();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        return Integer.valueOf(localDate.format(formatter));
+    }
+
+    public static Date getLastWeekMonday() {
+        Date date = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(getThisWeekMonday(date));
+        cal.add(Calendar.DATE, -7);
+        return cal.getTime();
+    }
+
+    public static Date getThisWeekMonday(Date date) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        // 获得当前日期是一个星期的第几天
+        int dayWeek = cal.get(Calendar.DAY_OF_WEEK);
+        if (1 == dayWeek) {
+            cal.add(Calendar.DAY_OF_MONTH, -1);
+        }
+        // 设置一个星期的第一天，按中国的习惯一个星期的第一天是星期一
+        cal.setFirstDayOfWeek(Calendar.MONDAY);
+        // 获得当前日期是一个星期的第几天
+        int day = cal.get(Calendar.DAY_OF_WEEK);
+        // 根据日历的规则，给当前日期减去星期几与一个星期第一天的差值
+        cal.add(Calendar.DATE, cal.getFirstDayOfWeek() - day);
+        return cal.getTime();
+    }
 
 }
